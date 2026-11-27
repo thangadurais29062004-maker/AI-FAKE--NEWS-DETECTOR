@@ -1,0 +1,30 @@
+terminal-
+pip install streamlit langchain faiss-cpu sentence-transformers PyPDF2 ollama
+pip install langchain langchain-community langchain-text-splitters
+pip install langchain langchain-community langchain-core
+
+(if errors try this)
+pip install langchain==0.1.0
+pip install langchain-community
+pip install langchain-text-splitters
+
+
+I built an AI Fake News Detection system using RAG architecture.
+It processes text using NLP, converts it into embeddings using
+transformer models, stores them in FAISS, retrieves relevant trusted information,
+and uses an LLM to classify news as fake or real with explanations and confidence scores.
+
+workflow of the project
+-----------------------
+User inputs news
+Text preprocessing (NLP)
+Text → chunks
+Chunks → embeddings (Transformers)
+Stored in FAISS
+Retriever fetches relevant info
+LLM analyzes and generates:
+Fake/Real
+Explanation
+Confidence
+
+
